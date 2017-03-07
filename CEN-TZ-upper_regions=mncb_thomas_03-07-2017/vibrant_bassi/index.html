@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title id="title">
+Tap: vibrant_bassi
+  </title>
+  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
+  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+  <script charset="utf-8" src="https://d3js.org/d3.v3.min.js">
+  </script>
+  <script id="dataAdjacency" type="text/json">
+   {"directed": true, "graph": {}, "nodes": [{"group": "CEN", "id": "CEN.Midwest"}, {"group": "CEN", "id": "CEN.USA"}, {"group": "CEN", "id": "CEN.South"}, {"group": "CEN", "id": "CEN.Northeast"}, {"group": "TZ", "id": "TZ.Central"}, {"group": "TZ", "id": "TZ.Eastern"}, {"group": "TZ", "id": "TZ.Mountain"}, {"group": "CEN", "id": "CEN.West"}, {"group": "TZ", "id": "TZ.USA"}, {"group": "TZ", "id": "TZ.Pacific"}], "links": [{"source": 0, "relation": "taxonomy_incoming.CEN", "target": 1, "key": 0}, {"source": 0, "relation": "disjoint", "target": 5, "key": 0}, {"source": 0, "relation": "overlaps", "target": 4, "key": 0}, {"source": 0, "relation": "overlaps", "target": 6, "key": 0}, {"source": 0, "relation": "disjoint", "target": 9, "key": 0}, {"source": 1, "relation": "taxonomy_outgoing.CEN", "target": 0, "key": 0}, {"source": 1, "relation": "taxonomy_outgoing.CEN", "target": 2, "key": 0}, {"source": 1, "relation": "equals", "target": 8, "key": 0}, {"source": 1, "relation": "includes", "target": 4, "key": 0}, {"source": 1, "relation": "includes", "target": 5, "key": 0}, {"source": 1, "relation": "includes", "target": 6, "key": 0}, {"source": 1, "relation": "taxonomy_outgoing.CEN", "target": 7, "key": 0}, {"source": 1, "relation": "taxonomy_outgoing.CEN", "target": 3, "key": 0}, {"source": 1, "relation": "includes", "target": 9, "key": 0}, {"source": 2, "relation": "overlaps", "target": 4, "key": 0}, {"source": 2, "relation": "taxonomy_incoming.CEN", "target": 1, "key": 0}, {"source": 2, "relation": "overlaps", "target": 5, "key": 0}, {"source": 2, "relation": "overlaps", "target": 6, "key": 0}, {"source": 2, "relation": "disjoint", "target": 9, "key": 0}, {"source": 3, "relation": "taxonomy_incoming.CEN", "target": 1, "key": 0}, {"source": 3, "relation": "disjoint", "target": 4, "key": 0}, {"source": 3, "relation": "is_included_in", "target": 5, "key": 0}, {"source": 3, "relation": "disjoint", "target": 9, "key": 0}, {"source": 4, "relation": "overlaps", "target": 0, "key": 0}, {"source": 4, "relation": "overlaps", "target": 2, "key": 0}, {"source": 4, "relation": "taxonomy_incoming.TZ", "target": 8, "key": 0}, {"source": 4, "relation": "is_included_in", "target": 1, "key": 0}, {"source": 4, "relation": "overlaps", "target": 7, "key": 0}, {"source": 4, "relation": "disjoint", "target": 3, "key": 0}, {"source": 5, "relation": "disjoint", "target": 0, "key": 0}, {"source": 5, "relation": "overlaps", "target": 2, "key": 0}, {"source": 5, "relation": "taxonomy_incoming.TZ", "target": 8, "key": 0}, {"source": 5, "relation": "is_included_in", "target": 1, "key": 0}, {"source": 5, "relation": "disjoint", "target": 7, "key": 0}, {"source": 5, "relation": "includes", "target": 3, "key": 0}, {"source": 6, "relation": "overlaps", "target": 0, "key": 0}, {"source": 6, "relation": "overlaps", "target": 2, "key": 0}, {"source": 6, "relation": "is_included_in", "target": 1, "key": 0}, {"source": 6, "relation": "overlaps", "target": 7, "key": 0}, {"source": 6, "relation": "taxonomy_incoming.TZ", "target": 8, "key": 0}, {"source": 7, "relation": "overlaps", "target": 4, "key": 0}, {"source": 7, "relation": "disjoint", "target": 5, "key": 0}, {"source": 7, "relation": "taxonomy_incoming.CEN", "target": 1, "key": 0}, {"source": 7, "relation": "overlaps", "target": 6, "key": 0}, {"source": 7, "relation": "is_included_in", "target": 8, "key": 0}, {"source": 7, "relation": "includes", "target": 9, "key": 0}, {"source": 8, "relation": "taxonomy_outgoing.TZ", "target": 4, "key": 0}, {"source": 8, "relation": "taxonomy_outgoing.TZ", "target": 5, "key": 0}, {"source": 8, "relation": "taxonomy_outgoing.TZ", "target": 6, "key": 0}, {"source": 8, "relation": "equals", "target": 1, "key": 0}, {"source": 8, "relation": "includes", "target": 7, "key": 0}, {"source": 8, "relation": "taxonomy_outgoing.TZ", "target": 9, "key": 0}, {"source": 9, "relation": "disjoint", "target": 0, "key": 0}, {"source": 9, "relation": "disjoint", "target": 2, "key": 0}, {"source": 9, "relation": "taxonomy_incoming.TZ", "target": 8, "key": 0}, {"source": 9, "relation": "is_included_in", "target": 1, "key": 0}, {"source": 9, "relation": "is_included_in", "target": 7, "key": 0}, {"source": 9, "relation": "disjoint", "target": 3, "key": 0}], "multigraph": true}
+  </script>
+  <style type="text/css">
+   .container {
+	width: initial;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+div#visualization button#zoomin {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+  z-index: 99;
+}
+div#visualization button#zoomout {
+  position: absolute;
+  right: 30px;
+  top: 80px;
+  z-index: 99;
+}	
+div#visualization button#reset {
+  position: absolute;
+  right: 30px;
+  top: 110px;
+  z-index: 99;
+}
+
+div#adjacency text.activeLegend {
+  fill: red;
+  font-weight: bold;
+}
+div#adjacency text.activeTick {
+   fill: red;
+   font-weight: bold;
+}
+div#adjacency button#zoomin {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+  z-index: 99;
+}
+div#adjacency button#zoomout {
+  position: absolute;
+  right: 30px;
+  top: 80px;
+  z-index: 99;
+}	
+div#adjacency button#reset {
+  position: absolute;
+  right: 30px;
+  top: 110px;
+  z-index: 99;
+}
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <ul class="nav nav-tabs">
+    <li class="active">
+     <a data-toggle="tab" href="#cleantax">
+      Cleantax
+     </a>
+    </li>
+    <li>
+     <a data-toggle="tab" href="#visualization">
+      Visualization
+     </a>
+    </li>
+    <li>
+     <a data-toggle="tab" href="#adjacency">
+      Adjacency
+     </a>
+    </li>
+   </ul>
+   <div class="tab-content">
+    <div class="tab-pane fade in active" id="cleantax">
+     <textarea cols="150" disabled="" id="cleantax-textarea" rows="30">taxonomy TZ Time_Zone
+(USA Central Eastern Mountain Pacific)
+
+taxonomy CEN Census_Regions
+(USA Midwest Northeast South West)
+
+articulation
+[TZ.Pacific is_included_in CEN.West]
+[TZ.Mountain is_included_in CEN.USA]
+[TZ.USA includes CEN.West]
+[TZ.Eastern is_included_in CEN.USA]
+[TZ.Pacific is_included_in CEN.USA]
+[TZ.USA equals CEN.USA]
+[TZ.Pacific disjoint CEN.Midwest]
+[TZ.Pacific disjoint CEN.South]
+[TZ.Pacific disjoint CEN.Northeast]
+[TZ.Mountain overlaps CEN.West]
+[TZ.Mountain overlaps CEN.Midwest]
+[TZ.Mountain overlaps CEN.South]
+[TZ.Eastern includes CEN.Northeast]
+[TZ.Eastern overlaps CEN.South]
+[TZ.Eastern disjoint CEN.West]
+[TZ.Central is_included_in CEN.USA]
+[TZ.Central overlaps CEN.West]
+[TZ.Central overlaps CEN.Midwest]
+[TZ.Central overlaps CEN.South]
+[TZ.Central disjoint CEN.Northeast]
+[TZ.Eastern disjoint CEN.Midwest]
+</textarea>
+    </div>
+    <div class="tab-pane fade" id="visualization">
+     <button id="zoomin">
+      Zoom in
+     </button>
+     <button id="zoomout">
+      Zoom out
+     </button>
+     <button id="reset">
+      Reset
+     </button>
+<svg height="857pt" viewbox="0.00 0.00 634.82 857.02" width="635pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 853.016)">
+  <title>
+   %3
+  </title>
+  <polygon fill="white" points="-4,4 -4,-853.016 630.815,-853.016 630.815,4 -4,4" stroke="none">
+  </polygon>
+  <!-- CEN.Midwest -->
+  <g class="node" id="node1">
+   <title>
+    CEN.Midwest
+   </title>
+   <polygon fill="#ffffcc" points="482.013,-300.56 482.013,-315.472 442.962,-326.016 387.736,-326.016 348.685,-315.472 348.685,-300.56 387.736,-290.016 442.962,-290.016 482.013,-300.56" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="415.349" y="-304.316">
+    CEN.Midwest
+   </text>
+  </g>
+  <!-- CEN.USA -->
+  <g class="node" id="node2">
+   <title>
+    CEN.USA
+   </title>
+   <polygon fill="#ffffcc" points="626.874,-300.56 626.874,-315.472 596.344,-326.016 553.169,-326.016 522.64,-315.472 522.64,-300.56 553.169,-290.016 596.344,-290.016 626.874,-300.56" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="574.757" y="-304.316">
+    CEN.USA
+   </text>
+  </g>
+  <!-- CEN.Midwest&#45;&gt;CEN.USA -->
+  <g class="edge" id="edge2">
+   <title>
+    CEN.Midwest-&gt;CEN.USA
+   </title>
+   <path d="M482.192,-308.016C492.196,-308.016 502.486,-308.016 512.389,-308.016" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="512.542,-311.516 522.542,-308.016 512.542,-304.516 512.542,-311.516" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- CEN.West -->
+  <g class="node" id="node3">
+   <title>
+    CEN.West
+   </title>
+   <polygon fill="#ffffcc" points="468.78,-207.56 468.78,-222.472 437.481,-233.016 393.217,-233.016 361.918,-222.472 361.918,-207.56 393.217,-197.016 437.481,-197.016 468.78,-207.56" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="415.349" y="-211.316">
+    CEN.West
+   </text>
+  </g>
+  <!-- CEN.West&#45;&gt;CEN.USA -->
+  <g class="edge" id="edge3">
+   <title>
+    CEN.West-&gt;CEN.USA
+   </title>
+   <path d="M461.589,-225.125C475.953,-229.423 491.518,-235.275 504.699,-243.016 522.382,-253.401 539.206,-269.068 551.82,-282.418" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="549.395,-284.952 558.736,-289.953 554.553,-280.219 549.395,-284.952" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- CEN.Northeast -->
+  <g class="node" id="node4">
+   <title>
+    CEN.Northeast
+   </title>
+   <polygon fill="#ffffcc" points="485.548,-499.56 485.548,-514.472 444.427,-525.016 386.272,-525.016 345.15,-514.472 345.15,-499.56 386.272,-489.016 444.427,-489.016 485.548,-499.56" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="415.349" y="-503.316">
+    CEN.Northeast
+   </text>
+  </g>
+  <!-- CEN.Northeast&#45;&gt;CEN.USA -->
+  <g class="edge" id="edge1">
+   <title>
+    CEN.Northeast-&gt;CEN.USA
+   </title>
+   <path d="M430.596,-489.005C458.562,-453.649 520.736,-375.046 553.17,-334.042" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="555.97,-336.144 559.429,-326.13 550.48,-331.801 555.97,-336.144" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- CEN.South -->
+  <g class="node" id="node5">
+   <title>
+    CEN.South
+   </title>
+   <polygon fill="#ffffcc" points="471.001,-346.56 471.001,-361.472 438.401,-372.016 392.297,-372.016 359.697,-361.472 359.697,-346.56 392.297,-336.016 438.401,-336.016 471.001,-346.56" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="415.349" y="-350.316">
+    CEN.South
+   </text>
+  </g>
+  <!-- CEN.South&#45;&gt;CEN.USA -->
+  <g class="edge" id="edge4">
+   <title>
+    CEN.South-&gt;CEN.USA
+   </title>
+   <path d="M457.295,-342.05C477.913,-336.025 503.061,-328.676 524.704,-322.351" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="525.757,-325.69 534.373,-319.525 523.793,-318.971 525.757,-325.69" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- TZ.Eastern -->
+  <g class="node" id="node6">
+   <title>
+    TZ.Eastern
+   </title>
+   <polygon fill="#ccffcc" points="285.5,-550.016 208.5,-550.016 208.5,-514.016 285.5,-514.016 285.5,-550.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="247" y="-528.316">
+    TZ.Eastern
+   </text>
+  </g>
+  <!-- TZ.Eastern&#45;&gt;CEN.Midwest -->
+  <g class="edge" id="edge25">
+   <title>
+    TZ.Eastern-&gt;CEN.Midwest
+   </title>
+   <path d="M285.296,-513.922C300.729,-504.493 317.262,-491.46 327,-475.016 360.088,-419.139 303.486,-379.953 345,-330.016 346.731,-327.934 348.658,-326.046 350.737,-324.335" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="353.019,-327.021 359.41,-318.571 349.144,-321.191 353.019,-327.021" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-498.816">
+    !
+   </text>
+  </g>
+  <!-- TZ.Eastern&#45;&gt;CEN.USA -->
+  <g class="edge" id="edge17">
+   <title>
+    TZ.Eastern-&gt;CEN.USA
+   </title>
+   <path d="M259.17,-550.248C269.97,-565.962 287.922,-587.564 310,-597.016 369.894,-622.658 316.026,-704.771 485.699,-534.016 541.184,-478.177 562.591,-383.378 570.103,-336.293" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="573.595,-336.608 571.615,-326.2 566.672,-335.571 573.595,-336.608" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="415.349" y="-642.816">
+    &lt;
+   </text>
+  </g>
+  <!-- TZ.Eastern&#45;&gt;CEN.West -->
+  <g class="edge" id="edge10">
+   <title>
+    TZ.Eastern-&gt;CEN.West
+   </title>
+   <path d="M263.239,-513.608C281.796,-490.059 312.46,-447.245 327,-405.016 339.224,-369.514 321.24,-266.089 345,-237.016 347.788,-233.605 351.103,-230.715 354.75,-228.268" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="356.684,-231.199 363.771,-223.323 353.319,-225.061 356.684,-231.199" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-445.816">
+    !
+   </text>
+  </g>
+  <!-- TZ.Eastern&#45;&gt;CEN.Northeast -->
+  <g class="edge" id="edge29">
+   <title>
+    TZ.Eastern-&gt;CEN.Northeast
+   </title>
+   <path d="M263.232,-550.084C278.581,-565.96 303.321,-585.333 327,-577.016 352.053,-568.216 375.247,-548.867 391.429,-532.738" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="394.345,-534.758 398.787,-525.139 389.316,-529.889 394.345,-534.758" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-581.816">
+    &gt;
+   </text>
+  </g>
+  <!-- TZ.Eastern&#45;&gt;CEN.South -->
+  <g class="edge" id="edge21">
+   <title>
+    TZ.Eastern-&gt;CEN.South
+   </title>
+   <path d="M285.51,-537.18C299.718,-537.204 315.278,-534.686 327,-526.016 344.651,-512.961 335.687,-499.897 345,-480.016 361.414,-444.975 383.368,-406.186 398.14,-381.027" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="401.16,-382.797 403.234,-372.407 395.134,-379.235 401.16,-382.797" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-536.816">
+    &gt;&lt;
+   </text>
+  </g>
+  <!-- TZ.Pacific -->
+  <g class="node" id="node7">
+   <title>
+    TZ.Pacific
+   </title>
+   <polygon fill="#ccffcc" points="284,-792.016 210,-792.016 210,-756.016 284,-756.016 284,-792.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="247" y="-770.316">
+    TZ.Pacific
+   </text>
+  </g>
+  <!-- TZ.Pacific&#45;&gt;CEN.Midwest -->
+  <g class="edge" id="edge20">
+   <title>
+    TZ.Pacific-&gt;CEN.Midwest
+   </title>
+   <path d="M284.248,-757.242C300.27,-747.819 317.581,-734.418 327,-717.016 347.491,-679.159 318.776,-364.153 345,-330.016 346.65,-327.869 348.509,-325.927 350.532,-324.171" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="352.814,-326.848 359.045,-318.279 348.83,-321.092 352.814,-326.848" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-740.816">
+    !
+   </text>
+  </g>
+  <!-- TZ.Pacific&#45;&gt;CEN.USA -->
+  <g class="edge" id="edge18">
+   <title>
+    TZ.Pacific-&gt;CEN.USA
+   </title>
+   <path d="M256.614,-792.097C269.861,-817.164 296.882,-857.91 327,-844.016 425.674,-798.497 435.864,-754.583 485.699,-658.016 542.759,-547.448 564.281,-397.819 571.066,-336.256" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="574.564,-336.459 572.133,-326.147 567.602,-335.725 574.564,-336.459" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="415.349" y="-837.816">
+    &lt;
+   </text>
+  </g>
+  <!-- TZ.Pacific&#45;&gt;CEN.West -->
+  <g class="edge" id="edge19">
+   <title>
+    TZ.Pacific-&gt;CEN.West
+   </title>
+   <path d="M258.788,-755.96C276.763,-724.805 312.316,-658.379 327,-597.016 336.321,-558.066 320.547,-268.734 345,-237.016 347.69,-233.527 350.933,-230.581 354.531,-228.094" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="356.457,-231.026 363.471,-223.085 353.036,-224.919 356.457,-231.026" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-650.816">
+    &lt;
+   </text>
+  </g>
+  <!-- TZ.Pacific&#45;&gt;CEN.Northeast -->
+  <g class="edge" id="edge16">
+   <title>
+    TZ.Pacific-&gt;CEN.Northeast
+   </title>
+   <path d="M262.332,-792.293C279.157,-811.602 307.264,-836.962 327,-819.016 358.215,-790.632 332.364,-670.269 345,-630.016 356.198,-594.344 378.668,-557.519 395.004,-533.576" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="398.091,-535.268 400.928,-525.06 392.345,-531.27 398.091,-535.268" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-828.816">
+    !
+   </text>
+  </g>
+  <!-- TZ.Pacific&#45;&gt;CEN.South -->
+  <g class="edge" id="edge15">
+   <title>
+    TZ.Pacific-&gt;CEN.South
+   </title>
+   <path d="M284.193,-780.848C299.412,-781.545 316.083,-779.08 327,-768.016 349.519,-745.193 336.054,-510.805 345,-480.016 355.735,-443.072 378.669,-404.956 395.229,-380.461" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="398.213,-382.3 401.008,-372.081 392.45,-378.327 398.213,-382.3" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-780.816">
+    !
+   </text>
+  </g>
+  <!-- TZ.Central -->
+  <g class="node" id="node8">
+   <title>
+    TZ.Central
+   </title>
+   <polygon fill="#ccffcc" points="285.5,-298.016 208.5,-298.016 208.5,-262.016 285.5,-262.016 285.5,-298.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="247" y="-276.316">
+    TZ.Central
+   </text>
+  </g>
+  <!-- TZ.Central&#45;&gt;CEN.Midwest -->
+  <g class="edge" id="edge11">
+   <title>
+    TZ.Central-&gt;CEN.Midwest
+   </title>
+   <path d="M285.747,-286.37C303.788,-289.406 325.943,-293.135 346.749,-296.637" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="346.388,-300.126 356.83,-298.334 347.55,-293.223 346.388,-300.126" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-296.816">
+    &gt;&lt;
+   </text>
+  </g>
+  <!-- TZ.Central&#45;&gt;CEN.USA -->
+  <g class="edge" id="edge13">
+   <title>
+    TZ.Central-&gt;CEN.USA
+   </title>
+   <path d="M285.582,-271.415C332.887,-262.038 416.349,-250.324 485.699,-266.016 504.066,-270.172 523.088,-278.64 538.733,-286.89" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="537.068,-289.969 547.523,-291.689 540.423,-283.825 537.068,-289.969" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="415.349" y="-269.816">
+    &lt;
+   </text>
+  </g>
+  <!-- TZ.Central&#45;&gt;CEN.West -->
+  <g class="edge" id="edge22">
+   <title>
+    TZ.Central-&gt;CEN.West
+   </title>
+   <path d="M264.046,-261.993C275.599,-250.266 292.227,-235.76 310,-228.016 322.929,-222.382 337.557,-218.965 351.681,-216.939" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="352.343,-220.385 361.845,-215.699 351.495,-213.436 352.343,-220.385" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-231.816">
+    &gt;&lt;
+   </text>
+  </g>
+  <!-- TZ.Central&#45;&gt;CEN.Northeast -->
+  <g class="edge" id="edge26">
+   <title>
+    TZ.Central-&gt;CEN.Northeast
+   </title>
+   <path d="M261.332,-298.209C290.654,-338.222 360.848,-434.008 395.012,-480.628" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="392.22,-482.739 400.954,-488.737 397.866,-478.602 392.22,-482.739" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-389.816">
+    !
+   </text>
+  </g>
+  <!-- TZ.Central&#45;&gt;CEN.South -->
+  <g class="edge" id="edge23">
+   <title>
+    TZ.Central-&gt;CEN.South
+   </title>
+   <path d="M278.303,-298.136C297.082,-308.888 321.942,-322.277 345,-332.016 350.803,-334.467 356.978,-336.798 363.158,-338.963" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="362.229,-342.343 372.823,-342.221 364.465,-335.71 362.229,-342.343" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-326.816">
+    &gt;&lt;
+   </text>
+  </g>
+  <!-- TZ.USA -->
+  <g class="node" id="node9">
+   <title>
+    TZ.USA
+   </title>
+   <polygon fill="#ccffcc" points="165,-221.016 101,-221.016 101,-185.016 165,-185.016 165,-221.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="133" y="-199.316">
+    TZ.USA
+   </text>
+  </g>
+  <!-- TZ.USA&#45;&gt;CEN.USA -->
+  <g class="edge" id="edge12">
+   <title>
+    TZ.USA-&gt;CEN.USA
+   </title>
+   <path d="M135.42,-184.795C139.23,-150.103 153.011,-75.2409 202,-44.0159 308.807,24.0617 388.902,10.6705 485.699,-71.0159 549.453,-124.819 567.079,-229.36 571.929,-279.649" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="568.458,-280.138 572.804,-289.801 575.433,-279.538 568.458,-280.138" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-5.81593">
+    ==
+   </text>
+  </g>
+  <!-- TZ.USA&#45;&gt;CEN.West -->
+  <g class="edge" id="edge9">
+   <title>
+    TZ.USA-&gt;CEN.West
+   </title>
+   <path d="M137.193,-184.837C143.544,-154.832 160.87,-95.7077 202,-70.0159 249.125,-40.5799 278.708,-40.5372 327,-68.0159 371.854,-93.5383 396.07,-152.184 406.993,-187.198" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="403.648,-188.229 409.846,-196.821 410.359,-186.239 403.648,-188.229" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="247" y="-73.8159">
+    &gt;
+   </text>
+  </g>
+  <!-- TZ.USA&#45;&gt;TZ.Eastern -->
+  <g class="edge" id="edge8">
+   <title>
+    TZ.USA-&gt;TZ.Eastern
+   </title>
+   <path d="M143.47,-230.835C165.804,-296.439 221.276,-459.389 239.838,-513.915" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="146.717,-229.512 140.181,-221.173 140.091,-231.767 146.717,-229.512" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- TZ.USA&#45;&gt;TZ.Pacific -->
+  <g class="edge" id="edge5">
+   <title>
+    TZ.USA-&gt;TZ.Pacific
+   </title>
+   <path d="M139.229,-231.069C150.468,-291.215 177.867,-437.023 202,-559.016 216.455,-632.085 234.493,-718.94 242.211,-755.911" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="142.66,-230.374 137.384,-221.186 135.779,-231.659 142.66,-230.374" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- TZ.USA&#45;&gt;TZ.Central -->
+  <g class="edge" id="edge6">
+   <title>
+    TZ.USA-&gt;TZ.Central
+   </title>
+   <path d="M168.544,-226.765C184.963,-238.053 204.281,-251.334 219.517,-261.809" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="170.482,-223.85 160.259,-221.069 166.517,-229.618 170.482,-223.85" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- TZ.Mountain -->
+  <g class="node" id="node10">
+   <title>
+    TZ.Mountain
+   </title>
+   <polygon fill="#ccffcc" points="292,-130.016 202,-130.016 202,-94.0159 292,-94.0159 292,-130.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="247" y="-108.316">
+    TZ.Mountain
+   </text>
+  </g>
+  <!-- TZ.USA&#45;&gt;TZ.Mountain -->
+  <g class="edge" id="edge7">
+   <title>
+    TZ.USA-&gt;TZ.Mountain
+   </title>
+   <path d="M164.344,-178.361C183.054,-163.16 206.637,-143.998 223.643,-130.181" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="161.95,-175.797 156.396,-184.819 166.364,-181.23 161.95,-175.797" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- TZ.Mountain&#45;&gt;CEN.Midwest -->
+  <g class="edge" id="edge24">
+   <title>
+    TZ.Mountain-&gt;CEN.Midwest
+   </title>
+   <path d="M292.061,-110.31C304.964,-112.088 318.004,-116.502 327,-126.016 373.132,-174.804 305.499,-221.72 345,-276.016 349.036,-281.563 354.272,-286.175 360.06,-290.003" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="358.445,-293.112 368.858,-295.069 361.938,-287.046 358.445,-293.112" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-129.816">
+    &gt;&lt;
+   </text>
+  </g>
+  <!-- TZ.Mountain&#45;&gt;CEN.USA -->
+  <g class="edge" id="edge27">
+   <title>
+    TZ.Mountain-&gt;CEN.USA
+   </title>
+   <path d="M285.151,-93.9479C287.535,-92.38 289.841,-90.7329 292,-89.0159 301.621,-81.3639 298.832,-73.1525 310,-68.0159 316.864,-64.8588 319.765,-65.8391 327,-68.0159 407.987,-92.3825 426.092,-113.019 485.699,-173.016 517.947,-205.476 544.925,-251.547 560.209,-280.598" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="557.238,-282.472 564.935,-289.753 563.458,-279.262 557.238,-282.472" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="415.349" y="-176.816">
+    &lt;
+   </text>
+  </g>
+  <!-- TZ.Mountain&#45;&gt;CEN.West -->
+  <g class="edge" id="edge28">
+   <title>
+    TZ.Mountain-&gt;CEN.West
+   </title>
+   <path d="M265.602,-93.9649C281.842,-79.5942 306.472,-63.6281 327,-75.0159 369.909,-98.8198 394.502,-153.442 406.08,-186.988" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="402.813,-188.258 409.261,-196.664 409.463,-186.071 402.813,-188.258" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-78.8159">
+    &gt;&lt;
+   </text>
+  </g>
+  <!-- TZ.Mountain&#45;&gt;CEN.South -->
+  <g class="edge" id="edge14">
+   <title>
+    TZ.Mountain-&gt;CEN.South
+   </title>
+   <path d="M269.64,-130.204C288.119,-147.064 313.75,-173.877 327,-203.016 350.963,-255.712 307.657,-287.782 345,-332.016 347.674,-335.183 350.801,-337.899 354.222,-340.229" fill="none" stroke="#aa00ff" stroke-dasharray="1,5" stroke-width="3">
+   </path>
+   <polygon fill="#aa00ff" points="352.802,-343.444 363.24,-345.259 356.211,-337.331 352.802,-343.444" stroke="#aa00ff" stroke-width="3">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="318.5" y="-206.816">
+    &gt;&lt;
+   </text>
+  </g>
+  <!-- Legend -->
+  <g class="node" id="node11">
+   <title>
+    Legend
+   </title>
+   <polygon fill="white" points="83,-290.516 0,-290.516 0,-115.516 83,-115.516 83,-290.516" stroke="black">
+   </polygon>
+   <polygon fill="none" points="0.5,-265.016 0.5,-290.016 83.5,-290.016 83.5,-265.016 0.5,-265.016" stroke="black">
+   </polygon>
+   <text font-family="Arial Black" font-size="14.00" text-anchor="start" x="19" y="-273.816">
+    Nodes
+   </text>
+   <polygon fill="#ffffcc" points="0.5,-240.016 0.5,-265.016 59.5,-265.016 59.5,-240.016 0.5,-240.016" stroke="none">
+   </polygon>
+   <polygon fill="none" points="0.5,-240.016 0.5,-265.016 59.5,-265.016 59.5,-240.016 0.5,-240.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="start" x="16" y="-248.816">
+    CEN
+   </text>
+   <polygon fill="none" points="59.5,-240.016 59.5,-265.016 83.5,-265.016 83.5,-240.016 59.5,-240.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="start" x="68" y="-248.816">
+    5
+   </text>
+   <polygon fill="#ccffcc" points="0.5,-215.016 0.5,-240.016 59.5,-240.016 59.5,-215.016 0.5,-215.016" stroke="none">
+   </polygon>
+   <polygon fill="none" points="0.5,-215.016 0.5,-240.016 59.5,-240.016 59.5,-215.016 0.5,-215.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="start" x="21.5" y="-223.816">
+    TZ
+   </text>
+   <polygon fill="none" points="59.5,-215.016 59.5,-240.016 83.5,-240.016 83.5,-215.016 59.5,-215.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="start" x="68" y="-223.816">
+    5
+   </text>
+   <polygon fill="none" points="0.5,-190.016 0.5,-215.016 83.5,-215.016 83.5,-190.016 0.5,-190.016" stroke="black">
+   </polygon>
+   <text font-family="Arial Black" font-size="14.00" text-anchor="start" x="17.5" y="-198.816">
+    Edges
+   </text>
+   <polygon fill="none" points="0.5,-165.016 0.5,-190.016 59.5,-190.016 59.5,-165.016 0.5,-165.016" stroke="black">
+   </polygon>
+   <text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="5.5" y="-173.816">
+    isa_CEN
+   </text>
+   <polygon fill="none" points="59.5,-165.016 59.5,-190.016 83.5,-190.016 83.5,-165.016 59.5,-165.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="start" x="68" y="-173.816">
+    4
+   </text>
+   <polygon fill="none" points="0.5,-140.016 0.5,-165.016 59.5,-165.016 59.5,-140.016 0.5,-140.016" stroke="black">
+   </polygon>
+   <text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="10.5" y="-148.816">
+    isa_TZ
+   </text>
+   <polygon fill="none" points="59.5,-140.016 59.5,-165.016 83.5,-165.016 83.5,-140.016 59.5,-140.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="start" x="68" y="-148.816">
+    4
+   </text>
+   <polygon fill="none" points="0.5,-115.016 0.5,-140.016 59.5,-140.016 59.5,-115.016 0.5,-115.016" stroke="black">
+   </polygon>
+   <text fill="#aa00ff" font-family="Times,serif" font-size="14.00" text-anchor="start" x="19" y="-123.816">
+    Art.
+   </text>
+   <polygon fill="none" points="59.5,-115.016 59.5,-140.016 83.5,-140.016 83.5,-115.016 59.5,-115.016" stroke="black">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="start" x="64.5" y="-123.816">
+    21
+   </text>
+  </g>
+ </g>
+</svg>
+    </div>
+    <div class="tab-pane fade" id="adjacency">
+     <button id="zoomin">
+      Zoom in
+     </button>
+     <button id="zoomout">
+      Zoom out
+     </button>
+     <button id="reset">
+      Reset
+     </button>
+    </div>
+   </div>
+  </div>
+  <script id="visualization">
+   var size = {
+  width: document.body.clientWidth || window.innerWidth,
+  height: document.body.clientHeight || window.innerHeight
+}
+
+var oldSvg = d3.select("div#visualization svg")
+var graphG = d3.select("div#visualization svg g.graph");
+oldSvg.remove();
+
+var margin = {top: 0, right: 0, bottom: 0, left: 0},
+    width = size['width'] - margin.left - margin.right,
+    height = size['height'] - 1 - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .domain([-width / 2, width / 2])
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .domain([-height / 2, height / 2])
+    .range([height, 0]);
+
+var zoom = d3.behavior.zoom()
+    .x(x)
+    .y(y)
+    .scaleExtent([0.1, 32])
+    .on("zoom", zoom);
+
+var svg = d3.select("#visualization").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+	.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .call(zoom)
+	.append(function() {
+		return graphG.node();
+	});
+
+function zoom() {
+	x = d3.event.translate[0]
+	y = d3.event.translate[1]
+    graphG.attr("transform", "translate(" + d3.event.translate + ") scale(" + d3.event.scale + ")");
+}
+
+
+d3.select("div#visualization button#reset").on("click", reset);
+d3.select("div#visualization button#zoomin").on("click", zoomIn);
+d3.select("div#visualization button#zoomout").on("click", zoomOut);
+
+var originalWidth = Number(oldSvg.attr("width").slice(0, -2));
+var originalHeight = Number(oldSvg.attr("width").slice(0, -2));
+initialScale = Math.min(width/originalWidth, height/originalHeight) * 0.7
+var t = d3.transform(graphG.attr("transform")),
+    	initialX = (size['width'] - (initialScale * originalWidth))/2, //t.translate[0],
+    	initialY = size['height'] * 0.8, //t.translate[1],
+		initialS = initialScale; //t.scale[0];
+		
+function zoomIn() {
+	var t = d3.transform(graphG.attr("transform")),
+    	x = t.translate[0],
+    	y = t.translate[1],
+		s = t.scale[0];
+	var newScale = (s + 0.1);
+	zoom.scale(newScale)
+	graphG.attr("transform", "translate(" + x + " ," + y + ") scale(" + newScale + ")");
+}
+
+function zoomOut() {
+	var t = d3.transform(graphG.attr("transform")),
+    	x = t.translate[0],
+    	y = t.translate[1],
+		s = t.scale[0];
+	var newScale = (s - 0.1);
+	zoom.scale(newScale)
+	graphG.attr("transform", "translate(" + x + " ," + y + ") scale(" + newScale + ")");
+}
+
+function reset() {
+	initialTranslate = [initialX, initialY];
+	zoom.translate(initialTranslate);
+	zoom.scale(initialS)
+	graphG.attr("transform", "translate(" + initialX + " ," + initialY + ") scale(" + initialS + ")");
+}
+
+reset(); //removes the random jump after first click issue
+  </script>
+  <script id="adjacency">
+   var size = {
+  width: document.body.clientWidth || window.innerWidth,
+  height: document.body.clientHeight || window.innerHeight
+}
+
+var margin = {top: 0, right: 0, bottom: 0, left: 0},
+    width = size['width'] - margin.left - margin.right,
+    height = size['height'] - 1 - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .domain([-width / 2, width / 2])
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .domain([-height / 2, height / 2])
+    .range([height, 0]);
+
+var zoom = d3.behavior.zoom()
+    .x(x)
+    .y(y)
+    .scaleExtent([0.1, 32])
+    .on("zoom", zoom);
+
+var canvas = d3.select("#adjacency").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+	.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .call(zoom);
+
+var content = canvas.append("g");
+	
+var cellWidth = 25;
+
+var data = JSON.parse(document.getElementById('dataAdjacency').innerHTML);
+
+//sort nodes
+for (i in data['links']) {
+	l = data['links'][i];
+	l.source = data['nodes'][l.source].id
+	l.target = data['nodes'][l.target].id
+}
+data['nodes'] = data['nodes'].sort(function(a, b) { 
+									return d3.ascending(a.id, b.id); 
+								});
+//sort links for legend
+data['links'] = data['links'].sort(function(a, b) { 
+								return d3.ascending(a.relation, b.relation); 
+							});
+for (i in data['links']) {
+	l = data['links'][i];
+	l.source = data['nodes'].map(function (n) {
+									return n.id;
+								}).indexOf(l.source)
+	l.target = data['nodes'].map(function (n) {
+									return n.id;
+								}).indexOf(l.target)
+}
+
+var linksMap = { };
+for (i in data['links']) {
+	var l = data['links'][i];
+	linksMap[l.source + ";" + l.target] = l;
+}
+var cells = [];
+for (i in data['nodes']) {
+	for (j in data['nodes']) {
+		var id = i + ";" + j;
+		cells.push({ 
+					id: id,
+					source: i, 
+					target: j, 
+					relation: id in linksMap ? linksMap[id].relation : ""
+				});
+	}
+}
+c20 = d3.scale.category20();
+colorIndex = 0;
+var colors = { 
+		"" : "white",
+		"equals" : c20(colorIndex++),
+		"disjoint" : c20(colorIndex++),
+		"includes" : c20(colorIndex++),
+		"is_included_in" : c20(colorIndex++),
+		"overlaps" : c20(colorIndex++)
+}
+for (i in data['links']) {
+	var l = data['links'][i];
+	if (!(l.relation in colors)) {
+		colors[l.relation] = c20(colorIndex);
+		colorIndex = (colorIndex + 1) % 20;
+	}
+	cells.push({ 
+				id: l.source + ";" + l.target, 
+				source: l.source, 
+				target: l.target, 
+				relation: l.relation 
+			});
+}
+
+var x = d3.scale.linear()
+	.domain([-width / 2, width / 2])
+	.range([0, width]);
+
+var y = d3.scale.linear()
+	.domain([-height / 2, height / 2])
+	.range([height, 0]);
+
+adjacencyView = content.append("g")
+	      .attr("transform", "translate(90,90)");
+	    adjacencyView.selectAll("rect")
+	      .data(cells)
+	      .enter()
+	      .append("rect")
+	      .attr("width", cellWidth)
+	      .attr("height", cellWidth)
+	      .attr("x", function (d) {return d.target * cellWidth})
+	      .attr("y", function (d) {return d.source * cellWidth})
+	      .style("fill", function(d) { return colors[d.relation]; })
+	      .style("stroke", "gray")
+	      .on("mouseover", mouseover)
+		  .on("mouseout", mouseout);
+		
+var matrixScale = d3.scale.ordinal()
+					.domain(data['nodes'].map(function (n) {
+										return n.id
+									}))
+					.rangePoints([0, data['nodes'].length * cellWidth], 1);
+					
+/*tickValues = []
+for (i = 0; i < data['nodes'].length - 2; i++) { 
+	tickValues.push(i * cellWidth + 0.5 * cellWidth)
+}*/
+/*for (i in data['nodes']) {
+	console.log(i);
+	console.log(i * cellWidth);
+	console.log(i * cellWidth - 0.5 * cellWidth);
+	tickValues.push(i * cellWidth - 0.5 * cellWidth)
+	
+}
+console.log(tickValues);*/
+xAxis = d3.svg.axis()
+			.scale(matrixScale)
+			//.tickValues(tickValues)
+			.orient("top")
+			.tickSize(0); 
+yAxis = d3.svg.axis()
+			.scale(matrixScale)
+			//.tickValues(tickValues)
+			.orient("left")
+			.tickSize(0);    
+adjacencyView.append("g")
+			.call(xAxis)
+			.selectAll("text")
+			.style("text-anchor", "end")
+			.attr("transform", "translate(-8,-10) rotate(90)");
+adjacencyView.append("g")
+			.call(yAxis)
+			//.attr("transform", "translate(-10, -10)");
+  
+function mouseover(d, i) {
+	d3.selectAll("div#adjacency rect")
+		/*.style("stroke", function(o) {
+			return (o.source == d.source || o.target == d.target) ? "black" : "gray";
+		})*/
+		.style("stroke-width", function(o) {
+			return (o.source == d.source || o.target == d.target) ? "3px" : "1px";
+		});
+	d3.selectAll("div#adjacency legend g text").classed("activeLegend", function(c, i) { 
+												return c == d.relation
+											});
+	d3.selectAll("div#adjacency g.tick text").classed("activeTick", function(c, i) {
+												return data['nodes'][d.source].id == c || data['nodes'][d.target].id == c;
+											});
+}
+
+function mouseout() {
+	d3.selectAll("div#adjacency rect").style("stroke-width", "1px");
+	d3.selectAll("div#adjacency legend g text").classed("activeLegend", false);
+	d3.selectAll("div#adjacency g.tick text").classed("activeTick", false);
+}
+
+content.append("g").append("text").text("From").style("font-weight", "bold").attr("transform", "translate(5, 75)");
+content.append("g").append("text").text("To").style("font-weight", "bold").attr("transform", "translate(60, 30)");
+
+legend = []
+for (c in colors) {
+	if (c != "") { 
+		legend.push(c);
+	}
+}
+adjacencyViewLegend = content.append("g")
+	.attr("transform", "translate(" + ((data['nodes'].length * cellWidth) + 150) + ", 80)")
+	.attr("id", "legend");
+legendGs = adjacencyViewLegend.selectAll("g")
+  .data(legend);
+legendG = legendGs.enter()
+  .append("g")
+legendG.append("rect")
+  .attr("width", cellWidth)
+  .attr("height", cellWidth)
+  .attr("x", function (d, i) {return 0; })
+  .attr("y", function (d, i) {return i * cellWidth})
+  .style("fill", function(d) { return colors[d]; })
+  .style("stroke", "gray");
+legendG.append("text")
+  .text(function(d) { return d; })
+  .attr("x", function (d, i) { return 40; })
+  .attr("y", function (d, i) { return (i * (cellWidth)) + 18; });	
+
+function zoom() {
+	x = d3.event.translate[0]
+	y = d3.event.translate[1]
+    content.attr("transform", "translate(" + d3.event.translate + ") scale(" + d3.event.scale + ")");
+}
+
+d3.select("div#adjacency button#reset").on("click", reset);
+d3.select("div#adjacency button#zoomin").on("click", zoomIn);
+d3.select("div#adjacency button#zoomout").on("click", zoomOut);
+
+
+var originalWidth = data['nodes'].length * cellWidth + 100;
+var originalHeight = data['nodes'].length * cellWidth + 100;
+initialScale = Math.min(width/originalWidth, height/originalHeight) * 0.7
+var t = d3.transform(graphG.attr("transform")),
+    	initialX = (size['width'] - (initialScale * originalWidth))/2, //t.translate[0],
+    	initialY = 20, //t.translate[1],
+		initialS = initialScale; //t.scale[0];
+
+function zoomIn() {
+	var t = d3.transform(content.attr("transform")),
+    	x = t.translate[0],
+    	y = t.translate[1],
+		s = t.scale[0];
+	var newScale = (s + 0.1);
+	zoom.scale(newScale)
+	content.attr("transform", "translate(" + x + " ," + y + ") scale(" + newScale + ")");
+}
+
+function zoomOut() {
+	var t = d3.transform(content.attr("transform")),
+    	x = t.translate[0],
+    	y = t.translate[1],
+		s = t.scale[0];
+	var newScale = (s - 0.1);
+	zoom.scale(newScale)
+	content.attr("transform", "translate(" + x + " ," + y + ") scale(" + newScale + ")");
+}
+
+function reset() {
+	initialTranslate = [initialX, initialY];
+	zoom.translate(initialTranslate);
+	zoom.scale(initialS)
+	content.attr("transform", "translate(" + initialX + " ," + initialY + ") scale(" + initialS + ")");
+}
+
+reset(); //removes the random jump after first click issue
+  </script>
+ </body>
+</html>
