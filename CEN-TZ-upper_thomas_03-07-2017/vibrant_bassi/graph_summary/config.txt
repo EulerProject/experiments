@@ -1,0 +1,17 @@
+isCoverage: True
+isSiblingDisjointness: True
+regions: mnpw
+
+cacheGitRepo: ''
+defaultIsCoverage: true
+defaultIsSiblingDisjointness: true
+defaultRegions: mnpw
+euler2Executable: euler2
+htmlViewer: xdg-open {file}
+imageFormat: svg
+imageViewer: xdg-open {file}
+maxPossibleWorldsToShow: 5
+reasoner: dlv
+repairMethod: topdown
+showOutputFileLocation: true
+workspaceGitRepo: http://github.com/EulerProject/experiments
