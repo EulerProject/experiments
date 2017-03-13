@@ -1,0 +1,28 @@
+taxonomy TZ Time_Zone
+(USA Central Eastern Mountain Pacific)
+
+taxonomy CEN Census_Regions
+(USA Midwest Northeast South West)
+
+articulation
+[TZ.Central disjoint CEN.Northeast]
+[TZ.Eastern disjoint CEN.Midwest]
+[TZ.Eastern disjoint CEN.West]
+[TZ.Pacific disjoint CEN.Midwest]
+[TZ.Pacific disjoint CEN.Northeast]
+[TZ.Pacific disjoint CEN.South]
+[TZ.USA equals CEN.USA]
+[TZ.Eastern includes CEN.Northeast]
+[TZ.USA includes CEN.West]
+[TZ.Central is_included_in CEN.USA]
+[TZ.Eastern is_included_in CEN.USA]
+[TZ.Mountain is_included_in CEN.USA]
+[TZ.Pacific is_included_in CEN.USA]
+[TZ.Pacific is_included_in CEN.West]
+[TZ.Central overlaps CEN.Midwest]
+[TZ.Central overlaps CEN.South]
+[TZ.Central overlaps CEN.West]
+[TZ.Eastern overlaps CEN.South]
+[TZ.Mountain overlaps CEN.Midwest]
+[TZ.Mountain overlaps CEN.South]
+[TZ.Mountain overlaps CEN.West]
